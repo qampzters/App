@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Baleg Oten!</title>
+        <style>
+            .background{
+        position: absolute;
+        background-color: black;
+        color: white;
+        padding: 100px;
+        height: 100%;
+        width: 760px;
+        text-align: center;
+
+            }   
+            .btn1{
+                text-align: center;
+                background-color: #BFF80F;
+                border-radius: 15px;
+                color: white;
+                height:100px;
+                width:50%
+;                font-size: 75px;
+            }
+            .text{
+                text-align: center;
+                font-size: 75px;
+                width:75%;
+            }
+
+        </style>
+    </head>
+
+    <body bgcolor='black'>
+        <div class='background'>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <form id='balegoten'>
+                <input type="text" id="username" class='text' name="username" placeholder="Enter your name"/>
+                <br>
+                <br>
+                <br>
+                <input type="button" id='submit' class='btn1' value='START!' onclick="baomoto();"/>
+            </form>
+        </div>
+        <script>
+
+function baomoto() {
+    var x = document.forms["balegoten"]["username"].value;
+    
+    if (x == "") {
+        alert("Please Enter Your Name.");
+        return false;
+    }
+    else
+    {
+      localStorage.setItem("name",x);
+        document.forms["balegoten"]["username"].value="";
+        location.href = 'title.html';
+    }
+}
+        </script>
+    </body>
+</html>
